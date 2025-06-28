@@ -29,4 +29,9 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 -- Copy
 keymap.set("n", "<leader>cf", '<cmd>let @+=expand("%")<CR>', { desc = "Copy current relative path to clipboard" })
 keymap.set("n", "<leader>cF", '<cmd>let @+=expand("%:p")<CR>', { desc = "Copy current absolute path to clipboard" })
-keymap.set("n", "<leader>ch", '<cmd>let @+=expand("%:p:h")<CR>', { desc = "Copy current filename to clipboard" })
+keymap.set("n", "<leader>ch", '<cmd>let @+=expand("%:p:h")<CR>', { desc = "Copy current absolute folder to clipboard" })
+keymap.set("n", "<leader>ct", '<cmd>let @+=expand("%:t")<CR>', { desc = "Copy current filename to clipboard" })
+
+-- Navigate between quickfix items
+keymap.set("n", "<leader>qn", "<cmd>cnext<CR>zz", { desc = "Forward qfixlist" })
+keymap.set("n", "<leader>qp", "<cmd>cprev<CR>zz", { desc = "Backward qfixlist" })
